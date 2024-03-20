@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Artifact directories/files
+build
+compile_commands.json
