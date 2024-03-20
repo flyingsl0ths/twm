@@ -7,7 +7,7 @@ s32 main()
 {
     auto wman = window_manager::create();
 
-    if (!(wman && window_manager::was_initialized(*wman)))
+    if (!window_manager::was_initialized(*wman))
     {
         std::cerr << "Failed to initialize window manager\n";
         return -1;
