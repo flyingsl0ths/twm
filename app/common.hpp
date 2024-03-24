@@ -1,13 +1,13 @@
 #pragma once
 
-#include <cstdint>
+#include <cstddef>
 #include <string_view>
 
-using u8  = std::uint8_t;
-using u32 = std::uint32_t;
-using usz = std::size_t;
-using s32 = std::int32_t;
-using f32 = float;
-using f64 = double;
+using u8    = char8_t;
+using u32   = unsigned int;
+using usz   = std::size_t;
+using s32   = int;
+using f32   = float;
+using f64   = double;
 using usize = std::size_t;
-using str = std::string_view;
+using str   = std::string_view;

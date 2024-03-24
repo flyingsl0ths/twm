@@ -25,7 +25,7 @@ inline bool was_initialized(std::optional<window_manager_t> man) noexcept(true)
 std::optional<window_manager_t> create() noexcept(
     std::is_nothrow_constructible_v<std::optional<window_manager_t>>);
 
-void run(window_manager_t /*unused*/) noexcept(true);
+void run(window_manager_t man);
 
 inline void teardown(window_manager_t man) noexcept(true)
 {
