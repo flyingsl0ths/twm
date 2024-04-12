@@ -34,3 +34,8 @@
 # Artifact directories/files
 build
 compile_commands.json
+.cache
+
+# CLion directories    
+.idea
+cmake-build-*
