@@ -9,13 +9,10 @@ indent_style = space
 end_of_line = lf
 
 [CMakeLists.txt]
-indent_style = space
 indent_size = 2
 
 [*.{py,md,yml,sh,cmake,frag,vert}]
-indent_style = space
 indent_size = 2
 
 [*.{py,md,yml,sh,cmake}.in]
-indent_style = space
 indent_size = 2

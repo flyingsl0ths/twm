@@ -5,8 +5,6 @@ HeaderFilterRegex: ""
 AnalyzeTemporaryDtors: false
 FormatStyle: none
 CheckOptions:
-  - key: performance-unnecessary-copy-initialization.ExcludedContainerTypes
-    value: ""
   - key: readability-suspicious-call-argument.PrefixSimilarAbove
     value: "30"
   - key: modernize-replace-auto-ptr.IncludeStyle

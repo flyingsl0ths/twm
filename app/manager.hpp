@@ -2,6 +2,7 @@
 
 #include <optional>
 #include <type_traits>
+#include <unordered_map>
 
 extern "C"
 {
@@ -13,11 +14,12 @@ namespace window_manager
 
 struct window_manager_t final
 {
-    Display* display;
-    Window   root;
+    Display*                           display;
+    Window                             root;
+    std::unordered_map<Window, Window> clients {};
 };
 
-inline bool was_initialized(std::optional<window_manager_t> man) noexcept(true)
+inline bool was_initialized(std::optional<window_manager_t>& man) noexcept(true)
 {
     return man && (*man).display != nullptr;
 }
@@ -25,7 +27,7 @@ inline bool was_initialized(std::optional<window_manager_t> man) noexcept(true)
 std::optional<window_manager_t> create() noexcept(
     std::is_nothrow_constructible_v<std::optional<window_manager_t>>);
 
-void run(window_manager_t man);
+void        run(window_manager_t& man) noexcept(false);
 
 inline void teardown(window_manager_t man) noexcept(true)
 {
