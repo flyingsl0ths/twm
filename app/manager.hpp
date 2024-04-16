@@ -29,7 +29,7 @@ std::optional<window_manager_t> create() noexcept(
 
 void        run(window_manager_t& man) noexcept(false);
 
-inline void teardown(window_manager_t man) noexcept(true)
+inline void teardown(window_manager_t& man) noexcept(true)
 {
     XCloseDisplay(man.display);
     man.display = nullptr;
