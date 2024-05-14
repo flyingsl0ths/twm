@@ -21,7 +21,7 @@ struct window_manager_t final
 
 inline bool was_initialized(std::optional<window_manager_t>& man) noexcept(true)
 {
-    return man && (*man).display != nullptr;
+    return man && man->display != nullptr;
 }
 
 std::optional<window_manager_t> create() noexcept(
